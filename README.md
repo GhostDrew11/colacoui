@@ -68,3 +68,7 @@ image as background on cards but it didn't work as planned. So will jump for ima
 since they are easy to manage in django and through props.
 -Read and practice more about django before actually working on the main project because it's an amazing framework. I'm glad I discovered it throughout this project.
 -Add multiple payment types (bill and coins) and correctly implement card payment
+-Add constraints on date for card which is only 'MM/YY' make sure or separate it in month and year integer fields 
+which is smarter
+-Make sure the product name entered is always one of those availables
+
