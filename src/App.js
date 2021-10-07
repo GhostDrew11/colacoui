@@ -1,9 +1,8 @@
 import './App.css';
 import React, {useState,useEffect} from 'react';
-import { Grid } from '@material-ui/core';
 import { makeStyles} from "@material-ui/core/styles";
 import SodaCard from './components/SodaCard';
-import SodaForm from './components/SodaForm';
+import OrderForm from './components/OrderForm';
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -33,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 function App() {
 
   const [sodas, setSodas] = useState([])
-  const [isClicked, setClicked] = useState(false)
+  
 
   const classes = useStyles();
   useEffect(() => {
@@ -68,35 +67,11 @@ function App() {
           </div>
         </div>
         <br/>
-        {isClicked === true ?  
-          <div className={classes.secondpanel}>
-            <SodaForm/>
-          </div> 
-        : null }
+        <div className={classes.secondpanel}>
+            <OrderForm/>
+        </div> 
       </div>
     </div>
-    // <div className="App">
-    //   <div className='col'>
-    //     <h1> Welcome to our Virtual Vending Machine Prototype</h1>
-    //     <br/>
-    //     <br/>
-
-    //     {/* {sodas && sodas.map((soda) => {
-    //       return (
-    //         <SodaCard soda={soda}/>
-    //       )
-    //     })} */}
-    //   </div>
-    //   <div className={classes.list}>
-    //     {sodas && sodas.map((soda) => {
-    //       return (
-    //         <div key={soda.id}> 
-    //           <SodaCard soda={soda}/>
-    //         </div>
-    //       )
-    //     })}
-    //   </div>
-    // </div>
   );
 }
 
