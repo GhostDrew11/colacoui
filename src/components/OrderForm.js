@@ -4,21 +4,33 @@ import APIService from '../APIService';
 
 function OrderForm() {
 
-    const  [name, setName] = useState('')
+    const  [product_name, setName] = useState('')
     const cost = 1.00
     const  [quantity, setQuantity] = useState('')
     const  [card_number, setCardNumber] = useState('')
-    const  [code, setCode] = useState('')
-    const  [date, setDate] = useState('')
-    const  [zip, setZip] = useState('')
+    const  [security_code, setCode] = useState('')
+    const  [expiration_date, setDate] = useState('')
+    const  [zip_code, setZip] = useState('')
 
-    let total = quantity * cost;
+    // let total = quantity * cost;
 
     const insertOrder = () => {
-        
-        APIService.InsertOrder({name,total,card_number,code,date,zip})
-        .then(resp => console.log(resp))
-        alert('Grab your soda')
+        if (quantity > 1) {
+            alert("You can't have more than one drink")
+        } else {
+            APIService.InsertOrder({product_name,cost,quantity,card_number,security_code,expiration_date,zip_code})
+            .then(resp => console.log(resp))
+            .catch(error => console.log(error))
+
+            alert('Grab your soda')
+        }
+
+
+        // {quantity ? 1 alert("You can't have more than one drink") : 
+        // APIService.InsertOrder({name,cost,card_number,code,date,zip})
+        // .then(resp => console.log(resp))
+        // .catch(error => console.log(error))
+        // alert('Grab your soda')}
     }
 
     return (

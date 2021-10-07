@@ -46,7 +46,7 @@ function App() {
     })
     .then(resp => resp.json())
     .then(resp => setSodas(resp))
-    .catch(error => console.log(error))
+    .catch(error => alert(error))
   }, [])
 
   return (
