@@ -1,7 +1,8 @@
 import React from 'react';
 import {Card, CardMedia} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Image from '../images/test.jpg';
+
+//{require('../images/soda.jpg')}
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -36,7 +37,7 @@ function SodaCard(props) {
         <div className={classes.root}>
             <div>
             <Card className={classes.root} >
-                <CardMedia className={classes.media} image={require('../images/soda.jpg')} title={props.soda.product_name}>
+                <CardMedia className={classes.media} image='' title={props.soda.product_name}>
 
                 </CardMedia>
             </Card>

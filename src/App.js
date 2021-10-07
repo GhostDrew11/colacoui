@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       justifyContent:'space-between',
       alignItems: 'flex-start',
-      flexDirection: 'column-wrap',
+      flexDirection: 'row',
       marginTop: "30px", 
       //marginLeft: "200px",
       marginRight: "100px",
@@ -20,11 +20,13 @@ const useStyles = makeStyles((theme) => ({
   },
   secondpanel: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+
   },
   firstpanel: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    marginRight: "300px",
   }
 
 }));
@@ -52,14 +54,12 @@ function App() {
       <div className={classes.mainpanel}>
         <div className={classes.firstpanel}>
           <div className='col'>
-            <h1> Welcome to our Virtual Vending Machine Prototype</h1>
-            <br/>
-            <br/>
+            <h1> Welcome to our Virtual Vending <span style={{display:"block"}}>Machine Prototype</span></h1>
           </div>
-          <div className={classes.list}>
+          <div className='row'>
             {sodas && sodas.map((soda) => {
               return (
-                <div key={soda.id}> 
+                <div key={soda.id} className='col-6 mb-4 mt-4' > 
                   <SodaCard soda={soda}/>
                 </div>
               )
