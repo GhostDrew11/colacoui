@@ -71,4 +71,5 @@ since they are easy to manage in django and through props.
 -Add constraints on date for card which is only 'MM/YY' make sure or separate it in month and year integer fields 
 which is smarter
 -Make sure the product name entered is always one of those availables
+-Make the web application responsive
 
