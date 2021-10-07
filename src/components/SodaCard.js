@@ -1,7 +1,7 @@
 import React from 'react';
-import {Card, CardContent} from "@material-ui/core";
+import {Card, CardMedia} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
+import Image from '../images/test.jpg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,10 +21,11 @@ const useStyles = makeStyles((theme) => ({
     },
     label2: {
         justifyContent: 'flex-end',
-    },
-    // cardContainer: {
-    //     backgroundImage: `url(${Image})`
-    // }
+    },  
+    media: {
+        height: 0,
+        paddingTop: "56.25%"
+    }
 }));
 
 function SodaCard(props) {
@@ -34,10 +35,10 @@ function SodaCard(props) {
     return (
         <div className={classes.root}>
             <div>
-            <Card className={classes.root}>
-                <CardContent>
-                
-                </CardContent>
+            <Card className={classes.root} >
+                <CardMedia className={classes.media} image={require('../images/soda.jpg')} title={props.soda.product_name}>
+
+                </CardMedia>
             </Card>
           </div>
           <div className={classes.labels} >
