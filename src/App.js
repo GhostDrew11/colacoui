@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'flex-start',
       flexDirection: 'row',
       marginTop: "30px", 
-      //marginLeft: "200px",
       marginRight: "100px",
   },
   mainpanel: {

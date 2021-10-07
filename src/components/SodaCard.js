@@ -1,13 +1,13 @@
 import React from 'react';
-import {Card, CardMedia} from "@material-ui/core";
+import {Card, CardContent, Typography} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-//{require('../images/soda.jpg')}
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width:130,
-        height:130,
+        width:150,
+        height:150,
     },
     labels: {
         display: 'flex',
@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
     media: {
         height: 0,
         paddingTop: "56.25%"
+    },
+    content: {
+        display: "flex",
+        justifyContent: "center"
     }
 }));
 
@@ -37,9 +41,11 @@ function SodaCard(props) {
         <div className={classes.root}>
             <div>
             <Card className={classes.root} >
-                <CardMedia className={classes.media} image='' title={props.soda.product_name}>
-
-                </CardMedia>
+                    <CardContent className={classes.content}>
+                        <Typography >
+                            Image of the {props.soda.product_name} Soda to be diplayed.Not yet available!
+                        </Typography>
+                    </CardContent>
             </Card>
           </div>
           <div className={classes.labels} >
