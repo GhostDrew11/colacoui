@@ -28,6 +28,23 @@ using Postman while teh server is up and running.
 The initial fect of available soda is made through a useEffect inside App.js , while the creation(insertion) of
 order was enable through the API call of the method InsertOrder from the class APIService.js later on called inside OrderForm.js
 
+### To import the database
+
+The database I used for this project is "colacobackup.sql"
+For windows with pgAdmin 4:
+
+You create a new database with the name you want 
+you right click on that database 
+then click on the option restore
+a new window will show up you'll go for 
+Filename to seth the path another window named "Select File" will show up
+then you will select your backup sql file inside the directory you saved it 
+then click select then restore. It will perfectly import data from the backup
+
+For MacOS with pgAdimn it will be the same process 
+Create a new database then run the command
+
+psql nameofyournewdatabase < colacobackup.sql
 
 # Days Breakdown
 
