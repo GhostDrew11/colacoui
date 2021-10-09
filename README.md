@@ -21,7 +21,7 @@ The colacoapi is a rest API, which should be build locally and deployed at "http
 Django allowing administrators to run task on rest API, CRUD functionalities for users, sodas and orders are
 should be available after being built locally at "http://127.0.0.1:8000/api/v1/users/", 
 "http://127.0.0.1:8000/api/v1/sodas/", "http://127.0.0.1:8000/api/v1/orders/". These api routes , can be tested
-using Postman while teh server is up and running.
+using Postman while the server is up and running.
 
 ### API Routes 
 
